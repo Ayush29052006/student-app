@@ -11,7 +11,7 @@ students = [
 
 @app.route("/")
 def home():
-    return "<h1>Student Info App - Version 1</h1>"
+    return "<h1>Student Info App - Version 2</h1>"
 
 
 @app.route("/students")
