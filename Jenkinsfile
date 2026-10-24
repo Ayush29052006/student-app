@@ -21,7 +21,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh "docker build -t ayushkanade29/studentapp:${BUILD_NUMBER} ."
+                sh "docker build -t kanadeayush29/studentapp:${BUILD_NUMBER} ."
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                     sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
-                    sh "docker push ayushkanade29/studentapp:${BUILD_NUMBER}"
+                    sh "docker push kanadeayush29/studentapp:${BUILD_NUMBER}"
                 }
             }
         }

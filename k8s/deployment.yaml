@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: studentapp
-          image: ayushkanade29/studentapp:v1
+          image: kanadeayush29/studentapp:v1
           ports:
             - containerPort: 5000
